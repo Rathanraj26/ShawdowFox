@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Website Enhancement</title>
+  <link rel="stylesheet" href="E-CommerceWebsite.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>ShopEase</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Cart</a>
+      <a href="#">Checkout</a>
+    </nav>
+  </header>
+
+  <!-- Filters and Sorting -->
+  <section class="controls">
+    <div class="filter">
+      <label>Category:</label>
+      <select id="category">
+        <option>All</option>
+        <option>Electronics</option>
+        <option>Clothing</option>
+        <option>Accessories</option>
+      </select>
+    </div>
+
+    <div class="sort">
+      <label>Sort By:</label>
+      <select id="sort">
+        <option>Default</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Rating</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="products">
+    <div class="product-card">
+      <img src="images.jpeg" alt="Laptop" />
+      <h3>Smart Laptop</h3>
+      <p class="price">₹45,000</p>
+      <p>⭐ 4.5 / 5</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Headphones.jpeg" alt="Headphones" />
+      <h3>Wireless Headphones</h3>
+      <p class="price">₹2,999</p>
+      <p>⭐ 4.2 / 5</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="men-t-shirt-mockup-front-view_1332-60600.jpg" alt="T-shirt" />
+      <h3>Men’s T-Shirt</h3>
+      <p class="price">₹799</p>
+      <p>⭐ 4.0 / 5</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="SmartWatch.jpeg" alt="Smartwatch" />
+      <h3>Smartwatch</h3>
+      <p class="price">₹5,499</p>
+      <p>⭐ 4.6 / 5</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Checkout Section -->
+  <section class="checkout">
+    <h2>Ready to Checkout?</h2>
+    <p>Streamlined, one-click checkout process.</p>
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ShopEase. All rights reserved.</p>
+  </footer>
+</body>
+</html>
