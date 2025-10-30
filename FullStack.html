@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopPro — E-commerce Demo (HTML + CSS)</title>
+  <link rel="stylesheet" href="Full-Stack.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#" class="logo">ShopPro</a>
+      </div>
+
+      <form class="search" action="#" onsubmit="return false">
+        <input type="search" placeholder="Search products, brands..." aria-label="Search"/>
+      </form>
+
+      <nav class="header-actions" aria-label="Primary">
+        <a class="icon-btn" href="#" title="Wishlist">♡</a>
+        <label for="checkout-toggle" class="cart-btn" title="View cart">
+          🛒 <span class="cart-count">3</span>
+        </label>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Find the product you'll love</h1>
+        <p>Curated deals, fast checkout, and secure payments — designed for conversion.</p>
+        <a class="cta" href="#products">Shop Now</a>
+      </div>
+      <img src="teen-boy-choosing-stylish-tshirt-600nw-2638682971.webp" alt="Shopping hero" />
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="container main-grid" id="products">
+    <!-- Filters -->
+    <aside class="filters" aria-label="Product filters">
+      <h2>Filters</h2>
+
+      <div class="filter-block">
+        <h3>Category</h3>
+        <label><input type="checkbox" /> Electronics</label>
+        <label><input type="checkbox" /> Clothing</label>
+        <label><input type="checkbox" /> Accessories</label>
+        <label><input type="checkbox" /> Home</label>
+      </div>
+
+      <div class="filter-block">
+        <h3>Price</h3>
+        <label><input type="radio" name="price" /> Under ₹1,000</label>
+        <label><input type="radio" name="price" /> ₹1,000 - ₹5,000</label>
+        <label><input type="radio" name="price" /> ₹5,000 - ₹20,000</label>
+        <label><input type="radio" name="price" /> Above ₹20,000</label>
+      </div>
+
+      <div class="filter-block">
+        <h3>Brand</h3>
+        <label><input type="checkbox" /> Acme</label>
+        <label><input type="checkbox" /> Nova</label>
+        <label><input type="checkbox" /> Orbis</label>
+        <label><input type="checkbox" /> Cosmo</label>
+      </div>
+
+      <div class="filter-block">
+        <h3>Rating</h3>
+        <label><input type="checkbox" /> ⭐⭐⭐⭐ & up</label>
+        <label><input type="checkbox" /> ⭐⭐⭐ & up</label>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" class="btn btn-secondary">Clear</button>
+        <button type="button" class="btn btn-primary">Apply</button>
+      </div>
+    </aside>
+
+    <!-- Products + Controls -->
+    <section class="products-section">
+      <div class="controls-row">
+        <div class="results">Showing <strong>24</strong> products</div>
+        <div class="sort-area">
+          <label for="sort">Sort</label>
+          <select id="sort" aria-label="Sort products">
+            <option>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Rating</option>
+            <option>Newest</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid" role="list">
+        <!-- Product Card (repeat) -->
+        <article class="product-card" role="listitem">
+          <figure>
+            <img src="images.jpeg" alt="Smart Laptop" />
+            <figcaption class="badge">New</figcaption>
+          </figure>
+          <div class="card-body">
+            <h3 class="product-title">Smart Laptop 14"</h3>
+            <p class="product-meta">Acme • Electronics</p>
+            <div class="price-row">
+              <div class="price">₹45,000</div>
+              <div class="rating" aria-label="4.5 out of 5">⭐ 4.5</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-outline">View</button>
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" role="listitem">
+          <figure>
+            <img src="Headphones.jpeg" alt="Wireless Headphones" />
+          </figure>
+          <div class="card-body">
+            <h3 class="product-title">Wireless Headphones</h3>
+            <p class="product-meta">Nova • Audio</p>
+            <div class="price-row">
+              <div class="price">₹2,999</div>
+              <div class="rating" aria-label="4.2 out of 5">⭐ 4.2</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-outline">View</button>
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" role="listitem">
+          <figure>
+            <img src="men-t-shirt-mockup-front-view_1332-60600.jpg" alt="Men's T-Shirt" />
+          </figure>
+          <div class="card-body">
+            <h3 class="product-title">Men’s T-Shirt</h3>
+            <p class="product-meta">Orbis • Clothing</p>
+            <div class="price-row">
+              <div class="price">₹799</div>
+              <div class="rating" aria-label="4.0 out of 5">⭐ 4.0</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-outline">View</button>
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" role="listitem">
+          <figure>
+            <img src="SmartWatch.jpeg" alt="Smartwatch" />
+            <figcaption class="badge badge-sale">-15%</figcaption>
+          </figure>
+          <div class="card-body">
+            <h3 class="product-title">Smartwatch</h3>
+            <p class="product-meta">Cosmo • Wearables</p>
+            <div class="price-row">
+              <div class="price">₹5,499</div>
+              <div class="rating" aria-label="4.6 out of 5">⭐ 4.6</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-outline">View</button>
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more product cards as needed (copy/paste) -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Checkout Drawer (CSS-only using hidden checkbox) -->
+  <input type="checkbox" id="checkout-toggle" class="visually-hidden" />
+  <aside class="checkout-drawer" aria-hidden="true">
+    <label for="checkout-toggle" class="drawer-close" title="Close checkout">✕</label>
+    <h2>Your Cart</h2>
+
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="Headphones.jpeg" alt="" />
+        <div class="item-info">
+          <div class="name">Wireless Headphones</div>
+          <div class="meta">Qty: 1 • ₹2,999</div>
+        </div>
+        <div class="item-remove">✕</div>
+      </div>
+
+      <div class="cart-item">
+        <img src="men-t-shirt-mockup-front-view_1332-60600.jpg" alt="" />
+        <div class="item-info">
+          <div class="name">Men’s T-Shirt</div>
+          <div class="meta">Qty: 1 • ₹799</div>
+        </div>
+        <div class="item-remove">✕</div>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <div class="line"><span>Subtotal</span><span>₹3,798</span></div>
+      <div class="line total"><span>Total</span><span>₹3,798</span></div>
+      <a href="#" class="btn btn-primary fullwidth">Checkout — Secure</a>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 ShopPro • Built with HTML & CSS</p>
+      <nav class="footer-nav">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
